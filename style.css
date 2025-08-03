@@ -186,11 +186,90 @@ header{
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(12,1fr);
+    border: 5px white solid;
+    outline: none;
 }
 .container-descripcion .foto{
-    background-color: black;
-    grid-column: 8/12;
+    background-color: white;
+    grid-column: 9/12;
     grid-row: 2/10;
     border-radius: 25px;
     box-shadow: 10px 10px 25px black;
+    z-index: 10;
+    background-image: url("https://media.lmneuquen.com/p/738fc28e3a09c27e520cf15f8958ef5b/adjuntos/195/imagenes/000/391/0000391065/fernando-cavenaghi-noticias-argentinas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
+.container-descripcion .descripcion{
+    /* background-color: red; */
+    grid-column: 2/13;
+    grid-row: 2/12;
+    border-radius: 25px;
+    /* box-shadow: 10px 10px 25px black; */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    color: white;
+    font-family: 'Nunito';
+    font-size: 40px;
+    padding: 10px 50px;
+    text-align: start
+}
+
+.burbujas{
+    position: absolute;
+    z-index: -10;
+    width: 180px;
+    height: auto;
+    bottom: 10%;
+    left: 0%;
+    top: 90%;
+    right: 100%;
+    animation: movida infinite 2s ;
+}
+@keyframes movida {
+    0%{
+        bottom: 10%;
+        left: 0%;
+        top: 90%;
+        right: 100%;
+    }
+    2%{
+        bottom: 5%;
+        left: 2%;
+        top: 95%;
+        right: 98%;
+    }
+    3%{
+        bottom: 10%;
+        left: 2%;
+        top: 90%;
+        right: 98%;
+    }
+    5%{
+        bottom: 5%;
+        left: 5%;
+        right: 95%;
+    }
+/*     100%{
+        bottom: 10%;
+        left: 0%;
+        top: 90%;
+        right: 100%;
+    } */
+}
+
+
+/*-------------Fin hero ---------------*/
+
+/*------------Section estudios ----------*/
+
+#estudios{
+    height: 100vh;
+    background-color: transparent;
+}
+
+
+/*------------Fin Section estudios ----------*/
