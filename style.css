@@ -317,14 +317,22 @@ header{
 /*------------Section estudios ----------*/
 
 #estudios{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#estudios h1{
+    color: white;
+}
+.container-estudios-card{
     height: 100vh;
-    background-color: red;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
-#estudios .card{
+.container-estudios-card .card{
     width: 20%;
     height: 60%;
     background-color: #05351c;
@@ -333,6 +341,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 20px 20px 2px #94ECBE;
 }
 .container-card{
     display: flex;
@@ -340,30 +349,35 @@ header{
     align-items: center;
     height: 100%;
     width: 100%;
+    border: #94ECBE 5px solid;
+    border-radius: 20px;
 }
 .container-card img{
 /*     flex: 60%; */
     object-fit: cover;
-    background-color: blue;
-    border-radius: 20px 20px 0 0;
+    object-position: center;
+    padding: 40px;
+    border-radius: 20px;
     width: 100%;
     transition: 1s all ease;
     height: 100%;
-    position: relative;
+
 }
 .container-card .container-descripcion-card{
     /* flex: 40%; */
     background-color: rebeccapurple;
     height: 0;
+    width: 80%;
+    text-align: center;
+    /* visibility: hidden; */
+    transition: all 2s ease;
     opacity: 0;
-    transition: all 2s ease; 
 }
 
 .card:hover img{
     height: 20%;
     /* max-height: 20%; */
     background-color: #05351c;
-    padding: 20px;
     object-position: top;
 }
 .card:hover .container-descripcion-card{
@@ -371,11 +385,12 @@ header{
     /* max-height: 80%; */
     background-color: #1A1F16;
     max-height: 80%;
+    /* visibility: visible; */
     opacity: 1;
 }
 .card:not(:hover) .container-descripcion-card{
     opacity: 0;
-    visibility: 0;
+    transition: 0.1s all ;
 }
 
 
