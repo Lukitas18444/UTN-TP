@@ -28,6 +28,10 @@ body{
     background-attachment: fixed;
 }
 
+section{
+    height: 100vh;
+}
+
 /*---------- header ----------*/
 
 header{
@@ -85,19 +89,25 @@ header{
 /*--------- main ---------------*/
 
 /*---------Hero ---------*/
+
 #personal{
+    height: 100vh;
+}
+
+#personal .container-personal{
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(12,1fr);
 /*     background-color: white; */
     width: 100%;
-    height: 80vh;
+/*     height: 80vh; */
     margin-top: 20px;
+    height: 80%;
 }
 
 
 
-#personal .linea-uno { 
+#personal .container-personal .linea-uno { 
     width: 100%;
     height: 5px;
     background-color: #94ECBE;
@@ -106,7 +116,7 @@ header{
     align-self: center;
     position: relative;
 }
-#personal .linea-uno::after { 
+#personal .container-personal .linea-uno::after { 
     content: "";
     width: 40px;
     height: 5px;
@@ -159,18 +169,18 @@ header{
 
 
 
-#personal .linea-cuatro { 
+#personal .container-personal .linea-cuatro { 
     width: 100%;
     height: 5px;
     background-color: #94ECBE;
-    grid-row: 12/13;
+    grid-row: 10/11;
     grid-column: 5/9;
     align-self: center;
     position: relative;
 
 }
 
-#personal .linea-cuatro::after { 
+#personal .container-personal .linea-cuatro::after { 
     content: "";
     width: 40px;
     height: 5px;
@@ -181,17 +191,17 @@ header{
     animation: carga-cuatro 10s infinite ease-out;
 
 }
-#personal .linea-dos { 
+#personal .container-personal .linea-dos { 
     height: 100%;
     width:5px;
     background-color: #94ECBE;
-    grid-row: 3/11;
+    grid-row: 2/10;
     grid-column: 2/3;
     justify-self: center;
     position: relative;
 }
 
-#personal .linea-dos::after{
+#personal .container-personal .linea-dos::after{
     content: "";
     width: 5px;
     height: 40PX;
@@ -202,16 +212,16 @@ header{
     animation: carga-dos 10s infinite ease-out;
 }
 
-#personal .linea-tres { 
+#personal .container-personal .linea-tres { 
     height: 100%;
     width:5px;
     background-color: #94ECBE;
-    grid-row: 3/11;
+    grid-row: 2/10;
     grid-column: 11/12;
     justify-self: center;
     position: relative;
 }
-#personal .linea-tres::after{
+#personal .container-personal .linea-tres::after{
     content: "";
     width: 5px;
     height: 40PX;
@@ -221,10 +231,10 @@ header{
     right: 0;
     animation: carga-costado 10s infinite ease-out;
 }
-#personal .container-descripcion{
+#personal .container-personal .container-descripcion{
     background-color: #94ECBE;
     width: 100%;
-    height: 100%;
+    height: 80%;
     grid-column: 3/11;
     grid-row: 2/12;
     border-radius: 25px;
@@ -236,7 +246,7 @@ header{
     border: 5px white solid;
     outline: none;
 }
-.container-descripcion .foto{
+.container-personal .container-descripcion .foto{
     background-color: white;
     grid-column: 9/12;
     grid-row: 2/10;
@@ -248,7 +258,7 @@ header{
     background-size: cover;
     background-position: center center;
 }
-.container-descripcion .descripcion{
+.container-personal .container-descripcion .descripcion{
     /* background-color: red; */
     grid-column: 2/13;
     grid-row: 2/12;
@@ -263,7 +273,7 @@ header{
     padding: 10px 50px;
     text-align: start
 }
-.container-descripcion .descripcion p{
+.container-personal .container-descripcion .descripcion p{
     color: white;
     font-size: 1.5rem;
 }
@@ -317,11 +327,12 @@ header{
 /*------------Section estudios ----------*/
 
 #estudios{
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+/*     margin-top: 10%; */
+    margin: 0auto;
 }
 #estudios h1{
     color: white;
@@ -341,7 +352,8 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 20px 20px 2px #94ECBE;
+    box-shadow: 0px 10px 40px 2px #94ECBE;
+    transition: 2s all ease;
 }
 .container-card{
     display: flex;
@@ -374,6 +386,10 @@ header{
     opacity: 0;
 }
 
+.card:hover{
+    transform: scale3d(1.1, 1.1, 1.1)
+}
+
 .card:hover img{
     height: 20%;
     /* max-height: 20%; */
@@ -391,8 +407,19 @@ header{
 .card:not(:hover) .container-descripcion-card{
     opacity: 0;
     transition: 0.1s all ;
+    
 }
 
 
 
 /*------------Fin Section estudios ----------*/
+
+
+/*------- Section Trabajos ----------*/
+#trabajos{
+    background-color: #4A7856;
+    width: 100%;
+}
+
+
+/*------- Fin Section Trabajos ----------*/
