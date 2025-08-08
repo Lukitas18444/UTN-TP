@@ -28,9 +28,9 @@ body{
     background-attachment: fixed;
 }
 
-section{
+/* section{
     height: 100vh;
-}
+} */
 
 /*---------- header ----------*/
 
@@ -339,6 +339,13 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+#estudios video{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -10;
 }
 #estudios h1{
     color: white;
@@ -346,6 +353,10 @@ header{
     font-weight: bold;
     font-size:50px;
     margin-top: 5px;
+    background-color: #05351c;
+    padding: 10px 40px;
+    box-shadow: 0px 10px 20px 10px #94ECBE;
+    border-radius: 5px;
 }
 .container-estudios-card{
     height: 100vh;
@@ -373,17 +384,64 @@ header{
     width: 100%;
     border: #94ECBE 5px solid;
     border-radius: 20px;
+    transition: 1s all ;
 }
-.card img{
-/*     flex: 60%; */
-    object-fit: cover;
-    object-position: center;
-    padding: 40px;
-    border-radius: 20px;
-    width: 100%;
-    transition: 1s all ease;
-    height: 100%;
+.container-html{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
 }
+.container-css{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-clip: border-box;
+}
+.container-js{
+    background-image: url("https://media.licdn.com/dms/image/v2/D4E12AQFfe1nZbaWdMw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698604163003?e=2147483647&v=beta&t=zrcrB8lfoVmZo0LcSLgut3A_4PwE6YFe9EK3iy17L2Y");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-clip: border-box;
+}
+.container-html:hover{
+        background-image: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)
+    )
+    ,url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.container-css:hover{
+        background-image: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)
+    )
+    ,url("https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-size: contain;
+}
+.container-js:hover{
+        background-image: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)
+    )
+    ,url("https://media.licdn.com/dms/image/v2/D4E12AQFfe1nZbaWdMw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698604163003?e=2147483647&v=beta&t=zrcrB8lfoVmZo0LcSLgut3A_4PwE6YFe9EK3iy17L2Y");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-size: contain;
+}
+
 .container-card .container-descripcion-card{
     height: 0;
     width: 80%;
@@ -400,10 +458,7 @@ header{
     transform: scale3d(1.1, 1.1, 1.1);
 }
 
-.card:hover img{
-    height: 20%;
-    background-color: #05351c;
-}
+
 .card:hover .container-descripcion-card{
     height: 80%;
     opacity: 1;
@@ -424,38 +479,52 @@ header{
 
 /*------- Section Trabajos ----------*/
 #trabajos{
-    background-color: #4A7856;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
     width: 100%;
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
+    height: 100vh;
 }
-.container-trabajos{
+#trabajos h1{
+    height: 40px;
     width: 100%;
-    height: 75%;
-    border: 1px solid white;
-    margin: auto;
+    grid-column: 5/9;
+    grid-row: 1/2;
+    background-color: #94ECBE;
+}
+
+.container-imagen-trabajo{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+
+}
+.container-trabajo-uno {
+    grid-column: 2/12;
+    grid-row: 2/5;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: row;
 }
-.container-trabajos-descripcion{
-    flex: 35%;
-    background-color: whitesmoke;
+.container-trabajo-dos{
+    grid-column: 2/12;
+    grid-row: 5/8;
+    width: 100%;
     height: 100%;
     border: 1px solid black;
 }
-.carrusel-trabajos{
-    flex: 65%;
-    background-color: red;
-    border: 1px solid white;
+.container-trabajo-tres{
+    grid-column: 2/12;
+    grid-row: 8/11;
+    width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    border: 1px solid blue;
 }
-
 
 
 /*------- Fin Section Trabajos ----------*/
