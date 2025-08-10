@@ -17,20 +17,18 @@
     scroll-behavior: smooth;
 } 
 body{
-    background-image: linear-gradient(
+background-image: linear-gradient(
         250deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.8)
         )
-        ,url("images/fondo.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+        ,url("images/fondo.jpeg"); 
 }
 
-/* section{
+ section{
     height: 100vh;
-} */
+    margin: 30px 0;
+} 
 
 /*---------- header ----------*/
 
@@ -48,6 +46,18 @@ header{
     flex: 50%;
     justify-items: center;
 }
+
+.container-nav-responsive{
+    display: none;
+
+}
+.container-nav-responsive svg{
+    color: white;
+    width: 40px;
+    height: 100%;
+    margin-right: 20px;
+}
+
 .container-nav{
     display: flex;
     justify-content: center;
@@ -479,52 +489,205 @@ header{
 
 /*------- Section Trabajos ----------*/
 #trabajos{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,1fr);
-    width: 100%;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
-#trabajos h1{
-    height: 40px;
-    width: 100%;
-    grid-column: 5/9;
-    grid-row: 1/2;
-    background-color: #94ECBE;
-}
-
-.container-imagen-trabajo{
+.container-proyecto-uno{
+    background-color: black;
     width: 100%;
     height: 100%;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 80%;
+}
+.descripcion-proyecto-uno{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
 }
-.container-trabajo-uno {
-    grid-column: 2/12;
-    grid-row: 2/5;
+.descripcion-proyecto-uno p{
+    width: 70%;
+    height: 70%;
+    color: white;
+}
+.imagen-proyecto-uno{
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+}
+.imagen-proyecto-uno iframe{
+    width: 80%;
+    height: 600px;
+}
+
+
+
+
+
+/*------- Fin Section Trabajos ----------*/
+
+
+/*------- Section cv ----------*/
+
+#cv{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-cv{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 80%;
+    width: 80%;
+}
+.container-cv h2{
+    grid-row: 1/2;
+    grid-column: 2/5;
+}
+.container-cv p{
+    grid-row: 2/6;
+    grid-column: 2/5;
+}
+.container-cv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    border: 1px solid var(--verde-cuatro);
+    box-shadow: 0 0 20px 1px black;
+}
+.container-cv .imagen-1{
+    grid-row: 2/7;
+    grid-column: 6/12;
+}
+.container-cv .imagen-2{
+    grid-row: 5/12;
+    grid-column: 7/13;
+}
+.container-cv .imagen-3{
+    grid-row: 9/13;
+    grid-column: 6/11;
+}
+
+
+
+/*------- fin section cv ----------*/
+
+/*------- Section contacto ----------*/
+
+#contacto{
+    width: 100%;
+    height: 100vh;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-contacto{
+    border: 1px solid white;
+    width: 30%;
+    height: 80%;
+    border-radius: 25px;
+}
+.container-titulo-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.redes{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    gap: 0 10px;
 }
-.container-trabajo-dos{
-    grid-column: 2/12;
-    grid-row: 5/8;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
+.container-contacto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px 40px;
 }
-.container-trabajo-tres{
-    grid-column: 2/12;
-    grid-row: 8/11;
+.container-contacto .container-form{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+    overflow: hidden;
+}
+.container-contacto .container-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    border: 1px solid blue;
+    color: wheat;
+    font-size: 20px;
+}
+.container-contacto .container-form input::placeholder{
+    border-radius: 8px;
+    outline: none;
+}
+.container-contacto .container-form input{
+    border-radius: 8px;
+    outline: none;
+    width: 80%;
+    padding: 10px 5px;
+}
+.container-contacto .container-form textarea{
+    border-radius: 8px;
+    outline: none;
+    width: 80%;
+
 }
 
 
-/*------- Fin Section Trabajos ----------*/
+
+/*------- Fin Section contacto ----------*/
+
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80px;
+}
+footer p{
+    margin-top: 20px;
+}
+
+/*---Fin footer ----*/
+
+
+/*----Media ----*/
+@media (max-width: 1080px) {
+    header .container-nav{
+        display: none;
+    }
+    header .container-nav-responsive{
+        display: block;
+    }
+}
+/*----fin media------*/
