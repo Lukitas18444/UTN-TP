@@ -275,10 +275,14 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    transition: 0.2s all;
+}
+.container-personal .container-descripcion .foto:hover{
+    transform: scale(1.1);
 }
 .container-personal .container-descripcion .descripcion{
     /* background-color: red; */
-    grid-column: 2/13;
+    grid-column: 2/19;
     grid-row: 2/12;
     border-radius: 25px;
     /* box-shadow: 10px 10px 25px black; */
@@ -293,7 +297,8 @@ header{
 }
 .container-personal .container-descripcion .descripcion p{
     color: white;
-    font-size: 1.5rem;
+    font-size: 25px;
+    font-family: 'Nunito';
 }
 
 /* .burbujas{
@@ -383,7 +388,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 10px 20px 10px #94ECBE;
+    box-shadow: 0px 2px 5px 1px #94ECBE;
     transition: 2s all ease;
 }
 .container-card{
@@ -689,5 +694,61 @@ footer p{
     header .container-nav-responsive{
         display: block;
     }
+    .container-personal .container-descripcion .descripcion{
+        grid-column: 2/12;
+        grid-row: 7/13;
+        font-size: 100%;
+        overflow: hidden;
+    }
+    .container-personal .container-descripcion .descripcion p{
+        font-size: 12px;
+    }
+    .container-personal .container-descripcion .foto{
+        grid-column: 2/12;
+        grid-row: 2/7;
+        object-fit: cover;
+    }
+    #estudios video{
+    display: none;
 }
+.container-estudios-card{
+    display: flex;
+    flex-direction: column;
+}
+.container-estudios-card .card{
+    width: 80%;
+    height:20%;
+    background-color: #05351c;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px 1px #94ECBE;
+    transition: 2s all ease;
+}
+.container-estudios-card .card:focus{
+    height: 30%;
+}
+
+#trabajos{
+    flex-direction: column;
+}
+
+.container-proyecto-uno{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.descripcion-proyecto-uno{
+    justify-content: center;
+    align-items: center;
+}
+.container-contacto{
+    width: 80%;
+}
+
+
 /*----fin media------*/
