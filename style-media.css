@@ -1,0 +1,91 @@
+
+/*----Media ----*/
+@media (max-width: 1080px) {
+    header .container-nav{
+        display: none;
+    }
+    header .container-nav-responsive{
+        display: block;
+        color: white;
+    }
+
+    .container-personal .container-descripcion .descripcion{
+        grid-column: 2/12;
+        grid-row: 7/13;
+        font-size: 100%;
+        overflow: hidden;
+    }
+    .container-personal .container-descripcion .descripcion p{
+        font-size: 12px;
+    }
+    .container-personal .container-descripcion .foto{
+        grid-column: 2/12;
+        grid-row: 2/7;
+        object-fit: cover;
+    }
+    #estudios video{
+    display: none;
+}
+.container-estudios-card{
+    display: flex;
+    flex-direction: column;
+}
+.container-estudios-card .card{
+    width: 80%;
+    height:20%;
+    background-color: #05351c;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px 1px #94ECBE;
+    transition: 2s all ease;
+}
+.container-estudios-card .card:focus{
+    height: 30%;
+}
+
+#trabajos{
+    flex-direction: column;
+}
+
+.container-proyecto-uno{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.descripcion-proyecto-uno{
+    justify-content: center;
+    align-items: center;
+}
+.container-contacto{
+    width: 80%;
+}
+.container-personal .container-descripcion .descripcion{
+    /* background-color: red; */
+    grid-column: 1/13;
+    grid-row: 7/12;
+    border-radius: 25px;
+    /* box-shadow: 10px 10px 25px black; */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    color: white;
+    font-family: 'Nunito';
+    padding: 10px 50px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.container-personal .container-descripcion .descripcion p {
+    font-size: 0.8em;
+}
+}
+
+
+/*----fin media------*/
