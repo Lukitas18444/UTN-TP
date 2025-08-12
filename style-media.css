@@ -5,6 +5,7 @@
 @media (max-width: 1350px) and (min-width: 1080px){
     header{
         position: relative;
+        height: 80px;
     }
     header .container-nav{
         display: none;
@@ -28,7 +29,8 @@
         text-decoration: none;
     }
     .container-personal .container-descripcion .descripcion p{
-        font-size: 100%;
+        font-size: clamp(8px, 80%, 12px);
+        color: black;
     }
     .container-card .container-descripcion-card h4{
     font-size: clamp(12px,1vh,24px);
@@ -39,7 +41,7 @@
 
 
 
-@media (max-width: 1080px) and (max-width: 1350px){
+@media (max-width: 1080px) /* and (max-width: 1350px) */{
     header .container-nav{
         display: none;
     }
@@ -56,7 +58,7 @@
         font-size: 100%;
     }
     .container-personal .container-descripcion .descripcion p{
-        font-size: 12px;
+        font-size: 80%;
     }
     .container-personal .container-descripcion .foto{
         grid-column: 2/12;
@@ -130,5 +132,50 @@
 }
 }
 
+@media (max-width: 450px) {
+    .container-logo{
+        font-size: 12px;
+    }
+    .container-personal .container-descripcion .descripcion p {
+        color: black;
+        font-size: 8px;
+    }
+    #estudios h1{
+        text-align: center;
+    }
+    .container-card .container-descripcion-card h4{
+        font-size: 8px;
+    }
+    .descripcion-proyecto-uno{
+        width: 90%;
+    }
+    .descripcion-proyecto-uno p{
+        font-size: 12px;
+    }
+    .container-cv h2{
+        grid-row: 1/2;
+        grid-column: 4/11
+    }
+    .container-cv p{
+        grid-row: 2/4;
+        grid-column: 4/11;
+    }
+    .container-cv .imagen-1{
+        grid-row: 8/11;
+        grid-column: 2/6;
+}
+    .container-cv .imagen-2{
+        grid-row: 7/10;
+        grid-column: 7/13;
+}
+    .container-cv .imagen-3{
+        grid-row: 9/13;
+        grid-column: 6/11;
+}
+.container-titulo-contacto p{
+    text-align: center;
+}
+
+}
 
 /*----fin media------*/

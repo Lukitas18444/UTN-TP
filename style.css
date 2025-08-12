@@ -26,11 +26,11 @@ body{
     background-attachment: fixed;
 }
 
- section{
+/*  section{
     height: 100vh;
     border-bottom: 1px solid white;
     padding-top: 20px;
-} 
+}  */
 
 /*---------- header ----------*/
 
@@ -109,6 +109,9 @@ nav{
 
 /*---------Hero ---------*/
 
+#personal{
+    height: 100vh;
+}
 
 #personal .container-personal{
     display: grid;
@@ -301,8 +304,8 @@ nav{
 
 }
 .container-personal .container-descripcion .descripcion p{
-    color: white;
-    font-size: clamp(14px, 3vh, 24px);
+    color: color;
+    font-size: clamp(14px, 100%, 24px);
     font-family: 'Nunito';
     text-shadow: 1px 2px 2px 1px black;
 }
@@ -362,6 +365,8 @@ nav{
     flex-direction: column;
     /* position: relative; */
     margin-bottom: 40px;
+/*     height: 100vh; */
+    position: relative;
 }
 #estudios video{
     position: absolute;
@@ -535,6 +540,7 @@ nav{
     align-items: center;
     flex-direction: column;
     gap: 20px 0;
+/*     height: 100vh; */
 }
 .container-proyecto-uno{
     background-color: black;
@@ -633,6 +639,7 @@ nav{
 /*------- Section cv ----------*/
 
 #cv{
+    height: 100vh;
     width: 100%;
     background-color: var(--verde-dos);
     display: flex;
@@ -656,7 +663,6 @@ nav{
 .container-cv p{
     grid-row: 2/6;
     grid-column: 2/5;
-    border-bottom: 1px solid white;
     font-family: 'nunito';
     margin-top: 10px;
     font-size: clamp(14px, 2vh, 24px);
